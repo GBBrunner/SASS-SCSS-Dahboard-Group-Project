@@ -1,5 +1,43 @@
+@use 'variable' as v;
+
+
 * {
     margin: 0;
     font-family: Helvetica, sans-serif;
     box-sizing: border-box;
+}
+header {
+    background-color: white;
+    border-bottom: 2px solid #e6e6e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: flex-end;
+    width: calc(100% - 300px);
+    padding: 20px 15px;
+    .icons {
+      display: flex;
+      column-gap: 40px;
+      i {
+        font-size: 21px;
+        display: flex;
+        align-items: center;
+    }
+    .fa-circle-user {
+          font-size: 35px;
+      }
+}
+nav {
+  height: 100%;
+  width: 15vw;
+  background-color: green;
+}
+img {
+    width: 30px;
+    height: 30px;
+    margin: 27px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 50%;
+}
 }
