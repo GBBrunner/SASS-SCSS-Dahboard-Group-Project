@@ -1,7 +1,49 @@
+iframe {
+  width: 15rem;
+  height: 100vh;
+  border: none;
+  background-color: none;
+  position: fixed;
+  overflow: hidden;
+  display: inline-block;
+  border: 2px solid black;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(75, 73, 73);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(75, 73, 73);
+}
+
+nav ul li a:hover {
+  color: rgb(6, 0, 91);
+  -webkit-text-decoration: underline 2px solid;
+          text-decoration: underline 2px solid;
+}
+
 * {
+  padding: 0;
   margin: 0;
   font-family: Helvetica, sans-serif;
   box-sizing: border-box;
+}
+
+img {
+  width: 25vh;
+  height: 25vh;
+  margin: 27px;
+  overflow: hidden;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 header {
@@ -26,18 +68,4 @@ header .icons i {
 }
 header .icons .fa-circle-user {
   font-size: 35px;
-}
-header nav {
-  height: 100%;
-  width: 15vw;
-  background-color: green;
-}
-header img {
-  width: 30px;
-  height: 30px;
-  margin: 27px;
-  overflow: hidden;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */
