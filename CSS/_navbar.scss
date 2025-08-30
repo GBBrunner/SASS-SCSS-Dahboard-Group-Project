@@ -1,8 +1,7 @@
 // Navigation bar
 @use "variables" as var;
-// body{
-//     display:flex;
-// }
+
+
 iframe{
     width:15rem;
     height:100vh;
@@ -13,18 +12,28 @@ iframe{
     display:inline-block;
     border: 2px solid black;
 }
-nav ul{
-    list-style-type:none;
-}
-nav ul li a{
-    text-decoration: none;
-    color:var.$fontColorMain;
-}
-nav ul li a{
-    text-decoration: none;
-    color:var.$fontColorMain;
-}
-nav ul li a:hover{
-    color:var.$fontColorMainHover;
-    text-decoration: underline 2px solid;
+nav{
+    background-color: var.$blank;
+    ul{
+        list-style-type:none;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-evenly;
+        list-style:none;
+        li{
+            a{
+                text-decoration: none;
+                color:var.$fontColorMain;
+                display: block;
+                font-size:1.2rem;
+                &:hover{
+                    color:var.$fontColorMainHover;
+                    text-decoration: underline 2px solid;
+                }
+            }
+            
+        }
+    }
+    
 }
