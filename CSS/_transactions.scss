@@ -1,0 +1,25 @@
+// Another Test
+@use "variables" as var;
+.historyBox{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width:80vw;
+    background-color: var.$blank;
+    height: 10vh;
+    border-radius: 20px;
+    vertical-align: top;
+    div{
+
+        .name{
+            flex-wrap: nowrap;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 8px;
+
+        }
+    }
+    p{
+        vertical-align: middle;
+    }
+}

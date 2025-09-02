@@ -1,0 +1,40 @@
+// Navigation bar
+// Another test
+@use "variables" as var;
+
+
+iframe{
+    width:15rem;
+    height:100vh;
+    border:none;
+    background-color:none;
+    position:fixed;
+    overflow: hidden;
+    display:inline-block;
+    border: 2px solid black;
+}
+nav{
+    background-color: var.$blank;
+    ul{
+        list-style-type:none;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: space-evenly;
+        list-style:none;
+        li{
+            a{
+                text-decoration: none;
+                color:var.$fontColorMain;
+                display: block;
+                font-size:1.2rem;
+                &:hover{
+                    color:var.$fontColorMainHover;
+                    text-decoration: underline 2px solid;
+                }
+            }
+            
+        }
+    }
+    
+}
