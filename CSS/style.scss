@@ -1,0 +1,110 @@
+@use 'variables' as v;
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height:100%;
+    background-color: v.$bg-color;
+}
+img {
+    width: 25vh;
+    height: 25vh;
+    margin: 27px;
+    overflow: hidden;
+    border-radius: 50%;
+    object-fit: cover;
+}
+header {
+    display: flex;
+    width: calc(100% - 15vw);
+    justify-self: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    border-bottom: 3px solid #c5c5c5;
+}
+nav{
+    height: 100%;
+    width:15vw;
+    background-color:green;
+}
+.stats {
+    display: grid;
+    width: calc(100% - 15vw);
+    justify-self: right;
+    grid-template-areas: 'text ... ... buttons'
+                         'stat1 stat2 stat3 stat4';
+    row-gap: 20px;
+}
+@mixin dataStyle {
+    background-color: white;
+    height: fit-content;
+}
+@mixin statData {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 290px;
+    padding: 13px 21px;
+    border-radius: 12px;
+    box-shadow: 3px 6px 9px 1px #e4e4e4;
+}
+.statDate {
+    grid-area: text;
+    @include dataStyle;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px #e4e4e4;
+}
+.buttons {
+    grid-area: buttons;
+    display: flex;
+    justify-content: space-between;
+    width: 275px;
+}
+.stats {
+    display: grid;
+}
+.stat1 {
+    grid-area: stat1;
+    @include dataStyle;
+    @include statData;
+}
+.stat2 {
+    grid-area: stat2;
+    @include dataStyle;
+    @include statData;
+}
+.stat3 {
+    grid-area: stat3;
+    @include dataStyle;
+    @include statData;
+}
+.stat4 {
+    grid-area: stat4;
+    @include dataStyle;
+    @include statData;
+}
+.stats div p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stats div h1 {
+    color: v.$font-color;
+    font-weight: 900;
+}
+.stats div i {
+    font-size: 16px;
+    color: v.$font-color;
+}
+.stats div p i {
+    font-size: 12px;
+    color: black;
+}
