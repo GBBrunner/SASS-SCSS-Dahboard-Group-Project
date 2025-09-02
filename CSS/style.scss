@@ -70,6 +70,25 @@ nav{
 }
 .stats {
     display: grid;
+    div {
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                font-size: 12px;
+                color: black;
+            }
+        }
+        i {
+            font-size: 16px;
+            color: v.$font-color;
+        }
+        h1 {
+            color: v.$font-color;
+            font-weight: 900;
+        }
+    }
 }
 .stat1 {
     grid-area: stat1;
@@ -90,21 +109,4 @@ nav{
     grid-area: stat4;
     @include dataStyle;
     @include statData;
-}
-.stats div p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.stats div h1 {
-    color: v.$font-color;
-    font-weight: 900;
-}
-.stats div i {
-    font-size: 16px;
-    color: v.$font-color;
-}
-.stats div p i {
-    font-size: 12px;
-    color: black;
 }
