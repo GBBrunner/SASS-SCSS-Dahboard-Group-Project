@@ -13,24 +13,32 @@ iframe{
     display:inline-block;
     border: 2px solid black;
 }
+#MainNavBar{
+    background-color: var.$blank; ;
+}
 nav{
-    background-color: var.$blank;
+    width:100%;
+
     ul{
         list-style-type:none;
         display: flex;
         flex-direction: column;
+        width:100%;
         height: 100vh;
         justify-content: space-evenly;
         list-style:none;
         li{
+
             a{
                 text-decoration: none;
                 color:var.$fontColorMain;
                 display: block;
                 font-size:1.2rem;
+                padding: .5rem 0;
                 &:hover{
                     color:var.$fontColorMainHover;
-                    text-decoration: underline 2px solid;
+                    background-color: var.$gradiantA;
+                    font-weight:700;
                 }
             }
             

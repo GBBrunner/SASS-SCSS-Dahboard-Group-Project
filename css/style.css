@@ -10,13 +10,18 @@ iframe {
   border: 2px solid black;
 }
 
-nav {
+#MainNavBar {
   background-color: #FFFFFF;
+}
+
+nav {
+  width: 100%;
 }
 nav ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  width: 100%;
   height: 100vh;
   justify-content: space-evenly;
   list-style: none;
@@ -26,22 +31,24 @@ nav ul li a {
   color: rgb(75, 73, 73);
   display: block;
   font-size: 1.2rem;
+  padding: 0.5rem 0;
 }
 nav ul li a:hover {
   color: rgb(6, 0, 91);
-  -webkit-text-decoration: underline 2px solid;
-          text-decoration: underline 2px solid;
+  background-color: #00ffff;
+  font-weight: 700;
 }
 
 .historyBox {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: row;
-  width: 80vw;
+  width: 85vw;
   background-color: #FFFFFF;
   height: 10vh;
   border-radius: 20px;
   vertical-align: top;
+  padding-right: 17rem;
 }
 .historyBox div .name {
   flex-wrap: nowrap;
@@ -51,6 +58,16 @@ nav ul li a:hover {
 }
 .historyBox p {
   vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 8rem;
+}
+
+.historyHead {
+  padding: 2rem;
+}
+.historyHead p {
+  padding: 0px;
 }
 
 * {
@@ -460,6 +477,7 @@ body {
   font-family: Helvetica, sans-serif;
   box-sizing: border-box;
   flex-wrap: wrap;
+  transition: 0.4s;
 }
 
 body {
