@@ -1,36 +1,69 @@
-
-// Another Test
 @use "variables" as var;
+
+img{
+    width:4rem;
+    height:4rem;
+    overflow: hidden;
+    border-radius: 50%;
+    object-fit: cover;
+}
 .historyBox{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width:85vw;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:80vw;
+    height: 7rem;
     background-color: var.$blank;
-    height: 10vh;
-    border-radius: 20px;
-    vertical-align: top;
-    padding-right: 17rem;
-    div{
-
-        .name{
-            flex-wrap: nowrap;
-            display: inline-block;
-            vertical-align: top;
-            margin-left: 8px;
-
-        }
-    }
-    p{
-        vertical-align: middle;
+    border-bottom: black 6px solid;
+    margin-bottom: .7rem;
+    border-radius: 45px;
+    .historyContent{
+        flex-basis: 150px;
         overflow: hidden;
         text-overflow: ellipsis;
-        width:8rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+        img{
+            margin-right: 10px;
+            flex-shrink: 0;
+            width:4rem;
+            height:4rem;
+            overflow: hidden;
+            border-radius: 50%;
+            object-fit: cover;
+            
+        }
     }
 }
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+.name {
+    display:flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    vertical-align: top;
+    align-items: center;
+    overflow:hidden;
+    text-overflow: clip;
+}
 .historyHead{
-    padding: 2rem;
-    p{
-        padding:0px;
+    font-size: 1.5rem;
+    font-weight: 501;
+}
+.location,.email{
+    display: none;
+}
+
+@media screen and (min-width:1250px){
+    .location{
+        display:flex ;
+    }
+}
+@media screen and (min-width:775px){
+    .email{
+        display:flex ;
     }
 }
