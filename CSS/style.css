@@ -38,15 +38,6 @@ nav ul li a:hover {
   font-weight: 700;
 }
 
-img {
-  width: 4rem;
-  height: 4rem;
-  overflow: hidden;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .historyBox {
   display: flex;
   justify-content: space-around;
@@ -79,6 +70,14 @@ img {
 .profile {
   display: flex;
   align-items: center;
+}
+.profile img {
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .name {
@@ -259,4 +258,46 @@ header .icons .fa-circle-user {
   padding: 13px 21px;
   border-radius: 12px;
   box-shadow: 3px 6px 9px 1px #e4e4e4;
+}
+
+.graphs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.graphs .users {
+  background-color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 290px;
+  padding: 13px 21px;
+  border-radius: 12px;
+  box-shadow: 3px 6px 9px 1px #e4e4e4;
+  width: calc(50% - 10px);
+}
+.graphs .users img {
+  height: 350px;
+}
+.graphs .revenue {
+  background-color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 290px;
+  padding: 13px 21px;
+  border-radius: 12px;
+  box-shadow: 3px 6px 9px 1px #e4e4e4;
+  width: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.graphs img {
+  height: 350px;
 }/*# sourceMappingURL=style.css.map */

@@ -125,3 +125,29 @@ header {
     @include dataStyle;
     @include statData;
 }
+.graphs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .users {
+        @include dataStyle;
+        @include statData;
+        width: calc(50% - 10px);
+        img {
+            height: 350px
+        }
+    }
+    .revenue {
+        @include dataStyle;
+        @include statData;
+        width: calc(50% - 10px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    img {
+            height: 350px
+        }
+}
+

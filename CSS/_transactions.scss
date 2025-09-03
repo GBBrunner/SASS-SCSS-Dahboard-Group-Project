@@ -1,12 +1,5 @@
 @use "variables" as var;
 
-img{
-    width:4rem;
-    height:4rem;
-    overflow: hidden;
-    border-radius: 50%;
-    object-fit: cover;
-}
 .historyBox{
     display:flex;
     justify-content: space-around;
@@ -39,6 +32,13 @@ img{
 .profile{
     display: flex;
     align-items: center;
+    img{
+        width:4rem;
+        height:4rem;
+        overflow: hidden;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 }
 .name {
     display:flex;
