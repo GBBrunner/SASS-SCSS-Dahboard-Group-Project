@@ -1,0 +1,69 @@
+@use "variables" as var;
+
+.historyBox{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:80vw;
+    height: 7rem;
+    background-color: var.$blank;
+    border-bottom: black 6px solid;
+    margin-bottom: .7rem;
+    border-radius: 45px;
+    .historyContent{
+        flex-basis: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex-shrink: 0;
+        img{
+            margin-right: 10px;
+            flex-shrink: 0;
+            width:4rem;
+            height:4rem;
+            overflow: hidden;
+            border-radius: 50%;
+            object-fit: cover;
+            
+        }
+    }
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    img{
+        width:4rem;
+        height:4rem;
+        overflow: hidden;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+.name {
+    display:flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    vertical-align: top;
+    align-items: center;
+    overflow:hidden;
+    text-overflow: clip;
+}
+.historyHead{
+    font-size: 1.5rem;
+    font-weight: 501;
+}
+.location,.email{
+    display: none;
+}
+
+@media screen and (min-width:1250px){
+    .location{
+        display:flex ;
+    }
+}
+@media screen and (min-width:775px){
+    .email{
+        display:flex ;
+    }
+}

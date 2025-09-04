@@ -1,0 +1,165 @@
+@use "variables" as var;
+@use "navbar";
+@use "leads";
+@use "transactions";
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+}
+body{
+    height:100%;
+    background-color: var.$bg-color;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+}
+.mainContent{
+    margin-left:var.$navWidth;
+    width:100%;
+    background-color: var.$Bg-color;
+}
+
+header {
+    background-color: var.$blank;
+    border-bottom: 3px solid var.$border;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: flex-end;
+    width: calc(100% - 0px);
+    padding: 20px 15px;
+    height: 10vh;
+    .icons {
+      display: flex;
+      column-gap: 40px;
+      i {
+        font-size: 21px;
+        display: flex;
+        align-items: center;
+
+    }
+    .fa-circle-user {
+          font-size: 35px;
+      }
+}
+}
+
+.stats {
+    display: grid;
+    width: calc(100% - 0vw);
+    justify-self: right;
+    grid-template-areas: 'text ... ... buttons'
+                         'stat1 stat2 stat3 stat4';
+    row-gap: 20px;
+}
+@mixin dataStyle {
+    background-color: white;
+    height: fit-content;
+}
+@mixin statData {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 290px;
+    padding: 13px 21px;
+    border-radius: 12px;
+    box-shadow: 3px 6px 9px 1px #e4e4e4;
+}
+.statDate {
+    grid-area: text;
+    @include dataStyle;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px #e4e4e4;
+}
+.buttons {
+    grid-area: buttons;
+    display: flex;
+    justify-content: space-between;
+    width: 275px;
+}
+.stats {
+    display: grid;
+    div {
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                font-size: 12px;
+                color: black;
+            }
+        }
+        i {
+            font-size: 16px;
+            color: var.$font-color;
+        }
+        h1 {
+            color: var.$font-color;
+            font-weight: 900;
+        }
+    }
+}
+.stat1 {
+    grid-area: stat1;
+    @include dataStyle;
+    @include statData;
+}
+.stat2 {
+    grid-area: stat2;
+    @include dataStyle;
+    @include statData;
+}
+.stat3 {
+    grid-area: stat3;
+    @include dataStyle;
+    @include statData;
+}
+.stat4 {
+    grid-area: stat4;
+    @include dataStyle;
+    @include statData;
+}
+.graphs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .users {
+        @include dataStyle;
+        @include statData;
+        width: calc(50% - 10px);
+        img {
+            height: 350px
+        }
+    }
+    .revenue {
+        @include dataStyle;
+        @include statData;
+        width: calc(50% - 10px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    img {
+            height: 350px
+        }
+}
+.chartCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+      }
+.chartBox {
+    height:28rem;
+    width: 48rem;
+    padding: 20px;
+    border-radius: 20px;
+    background: white;
+      }

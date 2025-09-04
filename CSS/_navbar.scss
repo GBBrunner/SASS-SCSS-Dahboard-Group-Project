@@ -1,0 +1,45 @@
+// Navigation bar
+@use "variables" as var;
+
+
+iframe{
+    width:var.$navWidth;
+    height:100vh;
+    border:none;
+    background-color:none;
+    position:fixed;
+    overflow: hidden;
+    display:inline-block;
+    border: 2px solid black;
+}
+nav{
+    background-color: var.$blank;
+    width:100%;
+    ul{
+        list-style-type:none;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        justify-content: space-evenly;
+        list-style: none;
+
+        li{
+            width: 100%;
+            a{
+                text-decoration: none;
+                color:var.$fontColorMain;
+                display: block;
+                font-size:1.4rem;
+                padding: 1.5rem 0;
+                &:hover{
+                    color:var.$fontColorMainHover;
+                    background-color: var.$Bg-hover-color;
+                    font-weight: 700;
+                }
+            }
+            
+        }
+    }
+    
+}
